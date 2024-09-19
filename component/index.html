@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>components</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .container{
+            display: flex;
+        }
+        /* password card start  */
+        .pas{
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            border-radius: 10px;
+            /* margin-right: 20px; */
+            margin-top: 100px;
+            margin-left: 100px;
+        }
+        input{
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        label{
+            display: block;
+            margin-top: 10px;
+            font-weight: bold;
+        }
+        .p1{
+            width: 54%;
+        }
+        /* password card end  */
+
+        /* list card start  */
+        
+         .list{
+            background-color: #fff;
+            padding: 40px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            border-radius: 10px;
+            /* margin-right: 20px; */
+            margin-top: 100px;
+            margin-left: 100px;
+         }
+         .btn{
+            padding: 10px;
+            border-radius: 20px;
+            margin: 5px;
+            background-color: #2b20ca;
+            color: white;
+            border: none;
+            /* cursor: pointer; */
+            /* font-size: 16px; */
+            width:40%;
+        }
+        .btn:hover{
+            background-color: #fff;
+            color: black;
+            border: 1px solid blue ;
+            /* shadow: 2px 2px 2px #ccc; */
+        }
+        ol{
+            font-size: 26px;
+            margin-left: 20px;
+            text-transform: capitalize;
+        }
+        h2{
+            font-size: 22px;
+            text-transform: capitalize;
+        }
+  
+        /* list  card end  */
+        /* header card start  */
+ 
+        .header{
+            background-color: #fff;
+            padding: 50px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            border-radius: 10px;
+            /* margin-right: 20px; */
+            margin-top: 100px;
+            margin-left: 100px;
+            
+        }
+
+        /* header card end  */
+
+
+    </style>
+</head>
+
+<body>
+    <!-- password card start -->
+    <div class="container">
+        <div class="pas">
+            <form action="">
+            <h1>Show Password</h1> <br>
+            
+            <label for="username">Username</label>
+            <input type="text" nmae="username" placeholder="username">
+            <!-- <br> -->
+            <label for="Email">Email</label>
+            <input type="text" name="Email" placeholder="example@gmail.com">
+            <!-- <br> -->
+            <label for="password"> Password</label>
+            <input class="p1" id="pass" type="password" placeholder="Enter Password" />
+            <button class="btn" onclick="document.getElementById('pass').type='text'">Show</button>
+            
+            <input type="submit">
+
+            </form>
+        </div>
+<!-- password card end  -->
+
+ <!-- list card start  -->
+        <div class="list">
+            <h2>list change in by js</h2>
+
+<br>
+
+            <ol id="list">
+                <li>data</li>
+                <li>data</li>
+                <li>data</li>
+                <li>data</li>
+            </ol>
+            <br>
+
+            <button class="btn" onclick="document.getElementById('list').type='A'">A</button>
+            <button class="btn"  onclick="document.getElementById('list').type='a'">a</button>
+            <button class="btn"  onclick="document.getElementById('list').type='i'">i</button>
+            <button class="btn"  onclick="document.getElementById('list').type='I'">I</button>
+        </div>
+        <!-- list card end  -->
+         <!-- header  card  start -->
+
+        <div class="header">
+            <div class="head" id="head">
+                <h1>Website Name</h1>
+            </div>
+            <div class="panel">
+                <h2>background color</h2>
+                <ul>
+                    <li onclick="document.getElementById('head').style.backgroundColor='red'">red</li>
+                    <li onclick="document.getElementById('head').style.backgroundColor='green'">green</li>
+                    <li onclick="document.getElementById('head').style.backgroundColor='blue'">blue</li>
+                </ul>
+                <h2>Text align</h2>
+                <ul>
+                    <li onclick="document.getElementById('head').style.textAlign='left'">left</li>
+                    <li onclick="document.getElementById('head').style.textAlign='center'">center</li>
+                    <li onclick="document.getElementById('head').style.textAlign='right'">right</li>
+                </ul>
+                <h2>Text color</h2>
+                <ul>
+                    <li onclick="document.getElementById('head').style.color='white'">white</li>
+                    <li onclick="document.getElementById('head').style.color='tomato'">tomato</li>
+                    <li onclick="document.getElementById('head').style.color='teal'">teal</li>
+                </ul>
+            </div>
+
+
+
+        </div>
+<!-- header card end  -->
+
+        
+    </div>   
+</body>
+
+</html>
