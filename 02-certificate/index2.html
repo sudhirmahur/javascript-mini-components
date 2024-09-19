@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Certificate || Coding Lover</title>
+    <style>
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    margin-top: 20px;
+    display: flex;
+    /* justify-content: space-between; */
+    gap: 200px;
+    align-items: flex-start;
+}
+
+.form-container {
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    border-radius: 10px;
+    /* margin-right: 20px; */
+    margin-top: 100px;
+    margin-left: 50px;
+}
+
+.form-container label {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.form-container input {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #1f497d;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    width: 100%;
+}
+
+button:hover {
+    background-color: #183a63;
+}
+
+.certificate-container {
+    /* background-color: #fff; */
+    background-image: linear-gradient(rgba(255, 255, 255, 0.85), rgb(255, 255, 255)), url('image/ducat-removebg-preview.png');
+    /* background-image: url('image/ducat-removebg-preview.png'); */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+
+    width: 800px;
+    height: 600px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+img{
+    margin-top: -25px;
+}
+
+.certificate-border {
+    border: 10px solid #1f497d;
+    padding: 20px;
+    /* width: 100%; */
+    width: 800px;
+    height: 100%;
+}
+
+.certificate-content {
+    text-align: center;
+}
+
+.certificate-content h1 {
+    font-size: 36px;
+    color: #1f497d;
+    margin-bottom: 20px;
+    margin-top: 0px;
+}
+
+.certificate-content h2 {
+    font-size: 28px;
+    color: #333;
+    margin: 10px 0;
+}
+
+.certificate-content h3 {
+    font-size: 24px;
+    color: #555;
+    margin: 10px 0;
+}
+
+.certificate-content h4 {
+    font-size: 20px;
+    color: #777;
+    margin: 10px 0;
+}
+
+.signature-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+}
+
+.signature {
+    border-top: 1px solid #000;
+    width: 150px;
+    text-align: center;
+}
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="form-container">
+            <img src="image/ducat-removebg-preview1.png" style="margin-top: 0px;" width="30%" alt="">
+            <h2>Certificate Details</h2>
+            <label for="nameInput">Enter Name:</label>
+            <input type="text" id="nameInput" placeholder="Enter Student name">
+            
+            <label for="courseInput">Course Name:</label>
+            <input type="text" id="courseInput" placeholder="Enter course name">
+            
+            <label for="teacherSignatureInput">Teacher's Signature:</label>
+            <input type="text" id="teacherSignatureInput" placeholder="Enter teacher's name">
+            
+            
+            <label for="authoritySignatureInput">Authority's Signature:</label>
+            <input type="text" id="authoritySignatureInput" placeholder="Enter authority's name">
+
+            <button onclick="generateCertificate()">Generate Certificate</button>
+        </div>
+
+        <div class="certificate-container" id="certificate">
+            <div class="certificate-border">
+                <div class="certificate-content">
+                    <img src="image/ducat-removebg-preview.png" height="170px" alt="">
+                    <h1>Certificate of Completion</h1>
+                    <p>This is to certify that</p>
+                    <h2 id="recipientName">[Student Name]</h2>
+                    <p>has successfully completed the</p>
+                    <h3 id="courseName">[Course Name]</h3>
+                    <p>on</p>
+                    <h4 id="dateCompleted">[--Date--]</h4>
+                    <div class="signature-container">
+                        <div class="signature">
+                            <p id="teacherSignature">Teacher Signature</p>
+                            
+                        </div>
+                        <div class="signature">
+                            <p id="authoritySignature">Authority Signature</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+
+function generateCertificate() {
+    // Get input values
+    let recipientName = document.getElementById('nameInput').value;
+    let courseName = document.getElementById('courseInput').value;
+    let teacherSignature = document.getElementById('teacherSignatureInput').value;
+    
+    let authoritySignature = document.getElementById('authoritySignatureInput').value;
+    let dateCompleted = new Date().toLocaleDateString();
+
+    // Assign values to certificate fields
+    document.getElementById('recipientName').innerText = recipientName;
+    document.getElementById('courseName').innerText = courseName;
+    document.getElementById('teacherSignature').innerText = teacherSignature;
+    document.getElementById('authoritySignature').innerText = authoritySignature;
+    document.getElementById('dateCompleted').innerText = dateCompleted;
+
+    // Show the certificate
+    document.getElementById('certificate').style.display = 'flex';
+}
+
+
+    </script>
+</body>
+</html>
