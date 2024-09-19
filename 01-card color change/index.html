@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>card</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .main-container{
+            width: 70%;
+            margin-top: 100px;
+            height: 80vh;
+            background-color: white;
+            display: flex;
+            /* justify-content: center; */
+            /* align-items: center; */
+            /* margin: 30vh auto; */
+            margin: 10vh  auto;
+
+
+            /* background-image: url('images/symbol-scatter-haikei.png');
+            background-repeat: no-repeat;
+            background-size: cover; */
+
+            background-color: whitesmoke;
+
+        }
+        .operation{
+            width: 40%;
+            border: 1px solid black;
+        }
+        .result{
+            width: 70%;
+            border: 1px solid black;
+            
+
+        }
+        .card{
+        width: 70%;
+        height: 250px;
+        margin-left: 100px;
+        margin-top: 140px;
+        /* background-color: whitesmoke; */
+        border: 1px solid black;
+        border-radius: 20px;
+        padding: 20px;
+        display: flex;
+        /* background-image: url('images/symbol-scatter-haikei.png');
+            background-repeat: no-repeat;
+            background-size: cover; */
+        /* text-transform: ; */
+       
+        }
+        .panel {
+            padding: 20px;
+
+
+
+        }
+        .panel ul{
+            list-style: none;
+            display: flex;
+            gap: 15px;
+            /* margin-top: 10px; */
+        }
+        .panel h2{
+            margin-top: 15px;
+        }
+        .card img{
+            width: 30%;
+            height: 120px;
+            margin-left: 170px;
+            /* margin-top: px; */
+            border-radius: 50%;
+        }
+        .banner{
+            /* display: flex; */
+            padding: 10px;
+
+        }
+        .banner ul{
+            list-style: none;
+            display: flex;
+            
+        }
+        .banner ul li{
+            width: 100%;
+            gap: 10px;
+        }
+        .banner img{
+            width: 60%;
+            /* display: flex; */
+        }
+
+
+    </style>
+</head>
+<body>
+   <div class="main-container">
+    <!-- lefe div  start -->
+            <div class="operation">
+                <div class="panel">
+                    <h2>background color</h2>
+                    <ul>
+                    
+
+                        <li onclick="document.getElementById('card').style.backgroundColor='rgb(238,174,202)'">Red</li>
+                        <li onclick="document.getElementById('card').style.backgroundColor='#DDCDA7'">Green</li>
+                        <li onclick="document.getElementById('card').style.backgroundColor='blue'">Blue</li>
+                    </ul>
+                    <h2>Text Transform </h2>
+                    <ul>
+                        <li onclick="document.getElementById('head').style.textTransform='capitalize'">capitalize</li>
+                        <li onclick="document.getElementById('head').style.textTransform='uppercase'">uppercase</li>
+                        <li onclick="document.getElementById('head').style.textTransform='lowercase'">lowercase</li>
+                    </ul>
+                    <h2>Text color</h2>
+                    <ul>
+                        <li onclick="document.getElementById('head').style.color='white'">white</li>
+                        <li onclick="document.getElementById('head').style.color='tomato'">tomato</li>
+                        <li onclick="document.getElementById('head').style.color='teal'">teal</li>
+                    </ul>
+                    <h2>Font Size </h2>
+                    <ul>
+                        <li onclick="document.getElementById('head').style.fontSize='10px'">10px</li>
+                        <li onclick="document.getElementById('head').style.fontSize='15px'">15px</li>
+                        <li onclick="document.getElementById('head').style.fontSize='20px'">20px</li>
+                    </ul>
+                </div>
+
+                <div class="banner">
+
+
+                    <ul>
+                        <li onclick="document.getElementById('banner').src='images/images (1).png'">
+                            <img src="images/images (1).png" />
+                        </li>
+                        <li onclick="document.getElementById('banner').src='images/images (2).png'">
+                            <img src="images/images (2).png" />
+                        </li>
+                        <li onclick="document.getElementById('banner').src='images/images (3).png'">
+                            <img src="images/images (3).png" />
+                        </li>
+                        <!-- <li onclick="document.getElementById('banner').src='images/images4.jpeg'">
+                            <img src="images/images4.jpeg" />
+                        </li>
+                        <li onclick="document.getElementById('banner').src='images/images5.jpeg'">
+                            <img src="images/images5.jpeg" />
+                        </li>
+                        <li onclick="document.getElementById('banner').src='images/download 6.png'">
+                            <img src="images/download 6.png" /> -->
+                        </li>
+                    </ul>
+                    
+                </div>
+            
+            </div>
+            <!-- left div end -->
+
+            <!-- right div start  -->
+            <div class="result">
+                <div class="card" id="card">
+                    <h4 id="head">
+                            Sudhir Mahur <br><br>
+                            sid@gmail.com <br><br>
+                            9374958578 <br><br>
+                            Ghaziabad 
+                            
+                        </h4>
+                        <!-- <h5 id="head"></h5> -->
+                    <img id="banner" src="images/images (1).png" alt="">
+                </div>
+            </div>
+
+                <!-- right div end  -->
+
+
+
+    </div> 
+
+</body>
+</html>
